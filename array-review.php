@@ -25,6 +25,7 @@
             printArray($animals);
             $animals = addElement($animals, "goat");
             $animals = addElement($animals, "Boa");
+            printCheckbox($cupcakes, "flavors[]");
 
             // print each element in the array
             function printArray($arr) {
@@ -43,6 +44,13 @@
                 }
                 printArray($arr);
                 return ($arr); // return array to save it
+            }
+
+            // print each array element as a checkbox
+            function printCheckbox($arr , $name) {
+                foreach($arr as $key => $value) {
+                    echo "<input type='checkbox' name='$name' value='$key'> $value<br>";
+                }
             }
         ?>
     </body>
