@@ -16,5 +16,16 @@
         <title>php Review Assignment</title>
     </head>
     <body>
+        <?php
+            $animals = array('panda', 'alpaca', 'boa');
+
+            printArray($animals);
+
+            function printArray($animals) {
+                foreach ($animals as $animal) {
+                    echo "$animal ";
+                }
+            }
+        ?>
     </body>
 </html>
