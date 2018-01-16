@@ -20,11 +20,26 @@
             $animals = array('panda', 'alpaca', 'boa');
 
             printArray($animals);
+            $animals = addElement($animals, "goat");
+            $animals = addElement($animals, "Boa");
 
-            function printArray($animals) {
-                foreach ($animals as $animal) {
-                    echo "$animal ";
+            // print each element in the array
+            function printArray($arr) {
+                sort($arr); // alphabetical order
+                foreach ($arr as $element) {
+                    echo "$element ";
                 }
+                echo "<br>";
+            }
+
+            // add element to array if not already present
+            function addElement($arr, $element) {
+                echo "adding $element...<br>";
+                if (!in_array(strtolower($element), $arr)) {
+                    array_push($arr, $element);
+                }
+                printArray($arr);
+                return ($arr); // return array to save it
             }
         ?>
     </body>
