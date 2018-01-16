@@ -18,6 +18,9 @@
     <body>
         <?php
             $animals = array('panda', 'alpaca', 'boa');
+            $cupcakes = array("grasshopper" => "The Grasshopper", "maple" => "Whiskey Maple Bacon",
+                    "carrot" => "Carrot Walnut", "caramel" => "Salted Caramel Cupcake",
+                    "velvet" => "Red Velvet", "lemon" => "Lemon Drop", "tiramisu" => "Tiramisu");
 
             printArray($animals);
             $animals = addElement($animals, "goat");
